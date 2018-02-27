@@ -4,5 +4,11 @@
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "proxies": [
+    {
+      "path": "*",
+      "proxyUrl": "https://smscrowv1-sampsontan.c9users.io/"
+    }
+  ]
 }
