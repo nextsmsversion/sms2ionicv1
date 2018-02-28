@@ -1,5 +1,6 @@
 
 <script src="js/controllers.js"></script>
+
 <body ng-app="app" >
 <ion-view title="DVA" id="page3">
   <ion-content padding="true" class="has-header">
@@ -8,25 +9,19 @@
       <label class="item item-select" id="dVA-select1">
         <span class="input-label">Message Type</span>
         <select>
-          <option>Last</option>
-          <option>Emerg</option>
-          <option>Instant</option>
-          <option>DVA</option>
+          <option ng-repeat="type in msgTypes">{{ type }}</option>
         </select>
       </label>
       <div class="spacer" style="width: 300px; height: 15px;"></div>
       <label class="item item-select" id="dVA-select2">
         <span class="input-label">Message</span>
-        <select>
-          <option>Last Train to ...</option>
-          <option>Last train has ended</option>
+        <select ng-model="selectedMsg">
+          <option ng-repeat="message in msgs">{{ message }}</option>
         </select>
       </label>
       <div class="spacer" style="width: 300px; height: 15px;"></div>
       <div id="dVA-markdown3" style="text-align:center;" class="show-list-numbers-and-dots">
-        <p style="color:#000000;">The Last Train To
-          <strong>SELECT</strong>
-        </p>
+        <p id="demo" style="color:#000000;">{{ selectedMsg }}</p>
       </div>
       <label class="item item-select" id="dVA-select3">
         <span class="input-label">Station</span>
@@ -50,15 +45,18 @@
       </label>
     </form>
     <button id="dVA-button14" class="button button-positive button-block">Add to Schedule</button>
+		
+		<!-- debugging purpose
 		<ion-list>
 			<ion-item >
 			   		<h3>Msg Types</h3>
 			</ion-item>
-		   	<ion-item ng-repeat="x in names">	
+		   	<ion-item ng-repeat="x in msgTypes">	
 		   		<h5>{{ x }}</h5>
 		  	</ion-item>
-		  	
 		</ion-list>   
+		-->
+		
   </ion-content>
 </ion-view>
 </body>
