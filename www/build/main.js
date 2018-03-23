@@ -162,6 +162,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+//https://devdactic.com/ionic-realtime-socket-io/
 var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
