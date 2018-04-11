@@ -4,7 +4,7 @@
 <body ng-app="app" >
 <ion-view title="DVA" id="page3">
   <ion-content padding="true" class="has-header">
-    <form id="dVA-form2" class="list">
+    <form id="dVA-form2" class="list"  ng-submit="passtoedit()"> 
       <div class="spacer" style="width: 300px; height: 15px;"></div>
       <label class="item item-select" id="dVA-select1">
         <span class="input-label">Message Type</span>
@@ -43,6 +43,7 @@
           <option>Two</option>
         </select>
       </label>
+      <input type="submit" class="button button-positive button-block" value="PASS TO EDIT">
     </form>
     <button id="dVA-button14" class="button button-positive button-block">Add to Schedule</button>
 		

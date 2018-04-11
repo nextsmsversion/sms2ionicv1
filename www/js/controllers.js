@@ -61,7 +61,7 @@ function ($scope, $stateParams) {
 .controller('dVACtrl', //['$scope', '$stateParams',  'Friends', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-		function($scope, $http,  $stateParams, Friends) {
+		function($scope, $http,  $stateParams, Friends, $state) {
 	    //Client:		https://sms2ionic-sampsontan.c9users.io 
 	    //Server:   	https://smscrowv1-sampsontan.c9users.io
 		//TODO how to make this to happen
@@ -84,6 +84,15 @@ function ($scope, $stateParams) {
 						}
 			);
 			
+			//TODO How to pass parameter when I redirect the page in angularjs using ui router?
+			//https://stackoverflow.com/questions/25298533/how-to-pass-parameter-when-i-redirect-the-page-in-angularjs-using-ui-router
+		    /** TODO 20180411 **/
+		    $scope.passtoedit=function passtoedit() {
+		        $state.go("tabsController.eDIT", { title: "THANKS GOD" });
+		        //$state.go("tabsController.eDIT", null);
+            }
+            
+		    
 		}
 )
    
@@ -91,6 +100,8 @@ function ($scope, $stateParams) {
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, $http) {
+    
+    
     $scope.save = function save() {
         var request = {
             method: "post",
@@ -104,6 +115,8 @@ function ($scope, $stateParams, $http) {
         $http(request).then(function (response){
             
         })
+        alert($stateParams.title);
+        
     };
 
 }])

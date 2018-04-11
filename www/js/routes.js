@@ -30,11 +30,12 @@ angular.module('app.routes', [])
   })
 
   .state('tabsController.eDIT', {
-    url: '/page4',
+    url: '/page4?title',
     views: {
       'tab3': {
         templateUrl: 'templates/eDIT.html',
         controller: 'eDITCtrl'
+         
       }
     }
   })
