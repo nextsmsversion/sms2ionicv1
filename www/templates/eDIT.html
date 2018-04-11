@@ -1,6 +1,6 @@
 <ion-view title="EDIT" id="page4">
   <ion-content padding="true" class="has-header">
-    <form id="eDIT-form5" class="list">
+    <form id="eDIT-form5" class="list"  ng-submit="save()">
       <div id="eDIT-button-bar1" class="button-bar">
         <button id="eDIT-button6" class="button button-positive button-block">Zone 1</button>
         <button id="eDIT-button7" class="button button-light button-block"></button>
@@ -25,7 +25,9 @@
         <input type="text" placeholder="">
       </label>
       <ion-toggle toggle-class="toggle-positive" id="eDIT-toggle2">Repeat</ion-toggle>
+      <input type="submit" class="button button-positive button-block" value="SAVE">
     </form>
-    <button id="eDIT-button2" class="button button-positive button-block">Save</button>
+    <!-- <button id="eDIT-button2" class="button button-positive button-block">Save</button>  -->
+    
   </ion-content>
 </ion-view>
